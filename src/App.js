@@ -1,13 +1,22 @@
+import React from 'react';
+
+import HomePage from './pages/homepage/homepage.component';
+
+import HeaderComponent from './components/header/header.component';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       
-      </header>
-    </div>
-  );
-}
+class App extends React.Component{
+  
+  
+  render() {
+    return (
+      <div>
+      <HeaderComponent/>
+      <HomePage/>
+      </div>
+    )
+  }
+};
 
 export default App;

@@ -1,0 +1,33 @@
+.header-bar {
+    background-color: #05386b;
+    display: flex;
+    color: white;
+    text-shadow: 4px 4px 8px #000000;
+    border-bottom: #05386b outset 5px;
+    
+    .logo-container {
+        height: auto;
+        width: 100x;
+        color: pink;
+        
+        .logo-icon {
+            width: 85px;
+            height: 85px;
+            margin: 20px 0 10px 40px ;
+            border: white outset 3px;
+            border-radius: 1000%;
+        }
+    
+    }
+    .sign-in-log-in-container {
+        margin-right: 55px;
+        width: 100%;
+        
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+    
+    
