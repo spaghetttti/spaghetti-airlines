@@ -1,33 +1,63 @@
-.header-bar {
-    background-color: #05386b;
-    display: flex;
-    color: white;
-    text-shadow: 4px 4px 8px #000000;
-    border-bottom: #05386b outset 5px;
-    
-    .logo-container {
-        height: auto;
-        width: 100x;
-        color: pink;
-        
-        .logo-icon {
-            width: 85px;
-            height: 85px;
-            margin: 20px 0 10px 40px ;
-            border: white outset 3px;
-            border-radius: 1000%;
-        }
-    
+@import "../scss-assets/main-style.scss";
+
+.header {
+  background: linear-gradient(#05386b, #05386bc7, #05386b73, white);
+  text-shadow: 4px 4px 8px #000000;
+
+  &-logo {
+    > a > span {
+      position: relative;
+      color: white;
+      bottom: 35px;
+      left: 20px;
     }
-    .sign-in-log-in-container {
-        margin-right: 55px;
-        width: 100%;
-        
-        text-align: right;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+
+    &-icon {
+      width: 55px;
+      height: auto;
+      margin: 15px 0 10px 40px;
+      border: white outset 3px;
+      border-radius: 100%;
     }
+  }
+
+  &-menu {
+    //Mobile menu
+    margin-right: 30%;
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $darkBlue;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &-links {
+    a {
+      font-size: $font-sm;
+      color: rgba(255, 255, 255, 0.719);
+      transition: 225ms ease-in-out;
+
+      &:hover {
+        color: white;
+        padding-bottom: 3px;
+        border-bottom: 5px solid white ;
+      }
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+  }
 }
-    
-    
+
+.change-on-mob {
+  @include breakpoint-down(medium) {
+    display: grid;
+    grid-template-columns: 60% auto auto;
+  }
+}
