@@ -1,0 +1,6 @@
+> commented out app.css and index.css to use _global.scss
+> Note ! create a data scture (class) of cities and countryies with specific 
+distance (S) with a one start point and, time between 2 cities and countryies will be 
+just |(S2-S1)/v| v-average airplane speed 
+> Note ! make an ACTIVE button on homepage that differec
+> Note ! make button hover animaiton more fun with filling effect  

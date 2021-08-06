@@ -1,7 +1,8 @@
 @import "../scss-assets/main-style.scss";
 
 .header {
-  background: linear-gradient(#05386b, #05386bc7, #05386b73, white);
+  //background: linear-gradient(#05386b, #05386bc7, #05386b73, white);
+  background-color: #05386b;
   text-shadow: 4px 4px 8px #000000;
 
   &-logo {
@@ -53,11 +54,13 @@
       }
     }
   }
+
+  
 }
 
 .change-on-mob {
   @include breakpoint-down(medium) {
     display: grid;
-    grid-template-columns: 60% auto auto;
+    grid-template-columns: 55% auto 15%;
   }
 }
