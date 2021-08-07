@@ -2,6 +2,33 @@
   visibility: hidden;
 }
 
+@keyframes shadow-fade {
+    form {
+        opacity: 1;
+        text-shadow: 4px 4px 8px #000000;
+    }  
+    25% {
+        opacity: 0.95;
+        text-shadow: 4px 4px 6px #000000;
+    }
+    50% {
+        opacity: 0.9;
+        text-shadow: 4px 4px 4px #000000;
+    }
+    75% {
+        opacity: 0.85;
+        text-shadow: 4px 4px 2px #000000;
+    }
+    to {
+        opacity: 0.8;
+        text-shadow: 4px 4px 1px #000000;
+    }  
+}
+
+.shadow-fade {
+    animation: shadow-fade 300ms ease-in-out forwards;
+}
+
 @keyframes fade-in {
   from {
     visibility: hidden;
@@ -16,6 +43,7 @@
     opacity: 1;
   }
 }
+
 .fade-in {
   animation: fade-in 300ms ease-in-out forwards;
 }

@@ -18,6 +18,10 @@ body {
     font-family: 'Prompt', sans-serif;
     font-size: $font-med;
     color: $lightGrayishBlue;
+    
+    // &.noscroll {
+    //     overflow: hidden; SOMEHOW SHOULD MANAGE TO PUSH THIS CLASS TO <body> 
+    // }
 }
 
 a, a:visited, a:hover {
@@ -43,7 +47,7 @@ a, a:visited, a:hover {
 // Buttons 
 button, .button {
     padding: 0.875rem 1.475rem;
-    background: linear-gradient(to right,  $limeGreen, $brightCyan );
+    background:#ffaa1c;
     border-radius: 50px;
     border : 0;
     color: white;   
@@ -56,7 +60,7 @@ button, .button {
     }
     
     &:hover {
-        opacity: 0.8; 
+        animation: shadow-fade 200ms ease-in-out forwards;
     }
         
     

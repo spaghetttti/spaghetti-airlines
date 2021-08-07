@@ -11,41 +11,16 @@
   .grid-container {
     margin: 10px auto;
     width: 90%;
-    background-color: #379683;
-    border-bottom: white outset 5px;
-    border-right: white outset 5px;
+    background-color: #0072c2;
+    border-bottom: #ffaa1c solid 5px;
+    border-radius: 5px;
     padding: 10px;
 
     .learn-more-link {
-      color: #05386b;
+      color: #9bcdff;
       text-shadow: none;
       margin-left: 75%;
     }
-  }
-
-  .grid-container_ {
-    width: 90%;
-    margin: 10px auto;
-    background-color: #379683;
-    border-bottom: white outset 5px;
-    border-right: white outset 5px;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-    span {
-      color: rgba(218, 218, 218, 0.643);
-      text-shadow: none;
-      font-size: 27px;
-    }
-
-    .grid-container-logo {
-        padding-left: 85%;
-        width: 10%;
-        height: 110%;
-    }
-
-
   }
 
   .minor-grid {

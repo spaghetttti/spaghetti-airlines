@@ -30,7 +30,7 @@ const MainGrid = () => (
       <div className="grid-container">&#128348; FLIGHT STATUS</div>
     </div>
     <div className="main-grid">
-        <div className="grid-container_">
+        <div className="grid-container">
             <div className="grid-container-text">
                 Flying Spaghetti Airlines <br/>
                 <span>Learn about our boarding process, what's available inflight & more</span>
