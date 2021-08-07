@@ -20,13 +20,15 @@ class HeaderComponent extends React.Component {
     render() {
         let boxClass = ["hamburger-menu"];
         let overLayBoxClass = [""];
+        let menuListClass = ["header-list container has-fade"];
         if (this.state.addClass) {
             boxClass.push('animate');
             overLayBoxClass.push('overlay');
             overLayBoxClass.push('fade-in');
-        }
-        else {
-          overLayBoxClass.push('fade-out');
+            menuListClass.push('fade-in');
+          }
+          else {
+            overLayBoxClass.push('fade-out');
         }
 
         return (
@@ -60,10 +62,18 @@ class HeaderComponent extends React.Component {
                       onClick={this.toggle.bind(this)}
                       className={boxClass.join(' ')} 
                     ></div>
-                  </div>
+                </div>
               </nav>
+              <div className={menuListClass.join(' ')}>
+                  <a href="/">Home</a>
+                  <a href="/">About</a>
+                  <a href="/">Contact</a>
+                  <a href="/">Blog</a>
+                  <a href="/">Careers</a> 
+              </div>
+                 
             </div>
-          )
+        )
 
     }
 };

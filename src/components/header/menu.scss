@@ -1,6 +1,9 @@
+@import '../scss-assets/animations';
+
 $bar-width: 40px;
 $bar-height: 4px;
 $bar-spacing: 10px;
+
 
 .menu-wrapper {
   margin-right: 300%;
@@ -69,4 +72,32 @@ $bar-spacing: 10px;
 	bottom: 0px;
 	left: 0px;
 	background-image: linear-gradient(#05386b, transparent);
+}
+
+.header-list {
+  background-color: white;
+  padding: 1.625rem;
+  border-radius: 5px;
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  margin-top: 1.5rem;
+  transform: translateX(-50%);
+  
+  a, a:hover {
+    text-decoration: none;
+    color: black ;
+    padding: 0.625rem;
+    display: block;
+    text-align: center;
+  }
+}
+
+//Spacing (Yes it is the same as in _global.scs, but if i import main-styles.scss menu will break 
+.container {
+  padding: 1.0625rem 1.5rem;  
+}
+
+.has-fade {
+  visibility: hidden;
 }

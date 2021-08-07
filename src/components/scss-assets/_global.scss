@@ -22,13 +22,11 @@ body {
 
 a, a:visited, a:hover {
     text-decoration: none;
-  
 }
 
 //Flex box
 .flex {
     display: flex;
-
     &-jc-sb {
         justify-content: space-between;
     }
@@ -58,11 +56,16 @@ button, .button {
     }
     
     &:hover {
-        opacity: 0.8;    ;
+        opacity: 0.8; 
     }
         
     
 
+}
+
+//Spacing 
+.container {
+    padding: 1.0625rem 1.5rem;
 }
 
 // Visibility 
