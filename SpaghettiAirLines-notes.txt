@@ -4,3 +4,7 @@ distance (S) with a one start point and, time between 2 cities and countryies wi
 just |(S2-S1)/v| v-average airplane speed 
 > Note ! make an ACTIVE button on homepage that differec
 > Note ! make button hover animaiton more fun with filling effect  
+> Note ! make head title and sign in text in one line
+> Note ! Can not push a class "noscroll" to body from header.component
+08.08.21 >> Style Hero img, learn flex-box and grid !
+> Note ! Fix title positioning in main-grid.styles.scss 

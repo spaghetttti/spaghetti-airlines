@@ -4,9 +4,22 @@ import "./main-grid.styles.scss";
 
 import { ReactComponent as Logo} from '../../assets/takeoff.svg'
 
+//import { ReactComponent as Hero } from "../../assets/4769.svg";
+
 
 const MainGrid = () => (
   <div className="main-grid">
+    <div className="hero container">
+      <div className="hero-img">
+        <img src='https://image.freepik.com/free-vector/queue-immigrants-standing-holding-luggage-waiting-departure-airport-group-tourists-with-globe-map-pointers-destination-line-background-travel-immigration-concept_74855-10142.jpg' width="100%" />
+      </div>
+      <div className="hero-text container">
+         <h1>Next generation flying</h1>
+         <p>Make your flying experience safer and more pleasant with us</p>
+         <a href="/" className="button">Purchase tickets</a> 
+      </div>
+      
+    </div>
     <div className="grid-container">
       <div>
         <ul>
@@ -35,7 +48,7 @@ const MainGrid = () => (
                 Flying Spaghetti Airlines <br/>
                 <span>Learn about our boarding process, what's available inflight & more</span>
             </div>
-            <Logo className='grid-container-logo'/>
+            
         </div>
     </div>
   </div>
