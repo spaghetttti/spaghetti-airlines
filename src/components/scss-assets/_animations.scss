@@ -1,32 +1,61 @@
+@import './variable';
+
 .has-fade {
   visibility: hidden;
 }
 
 @keyframes shadow-fade {
-    form {
-        opacity: 1;
-        text-shadow: 4px 4px 8px #000000;
-    }  
-    25% {
-        opacity: 0.95;
-        text-shadow: 4px 4px 7px #000000;
-    }
-    50% {
-        opacity: 0.9;
-        text-shadow: 4px 4px 6px #000000;
-    }
-    75% {
-        opacity: 0.85;
-        text-shadow: 4px 4px 5px #000000;
-    }
-    to {
-        opacity: 0.8;
-        text-shadow: 4px 4px 4px #000000;
-    }  
+  from {
+    //opacity: 1;
+    text-shadow: 4px 4px 8px #000000;
+  }
+  25% {
+    //opacity: 0.95;
+    text-shadow: 4px 4px 7px #000000;
+  }
+  50% {
+    //opacity: 0.9;
+    text-shadow: 4px 4px 6px #000000;
+  }
+  75% {
+    //opacity: 0.85;
+    text-shadow: 4px 4px 5px #000000;
+  }
+  to {
+    //opacity: 0.8;
+    text-shadow: 4px 4px 4px #000000;
+  }
 }
 
 .shadow-fade {
-    animation: shadow-fade 300ms ease-in-out forwards;
+  animation: shadow-fade 300ms ease-in-out forwards;
+}
+
+@keyframes light-fade-shadow {
+  from {
+    //opacity: 1;
+    text-shadow: 2px 2px 5px #080000b0;// $light-shadow; //
+  }
+  25% {
+    //opacity: 0.95;
+    text-shadow:2px 2px 4px #080000b0;
+  }
+  50% {
+    //opacity: 0.9;
+    text-shadow: 2px 2px 3px #080000b0;
+  }
+  75% {
+    //opacity: 0.85;
+    text-shadow: 2px 2px 1px #000000b0;
+  }
+  to {
+    //opacity: 0.8;
+    text-shadow:  2px 2px #000000b0;//$light-bold-shadow; //
+  }
+}
+
+.shadow-light-fade {
+  animation: light-fade-shadow 900ms ease-in-out forwards;
 }
 
 @keyframes fade-in {

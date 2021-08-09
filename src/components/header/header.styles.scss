@@ -2,7 +2,7 @@
 
 .header {
   background-color: #003b73;
-  text-shadow: 4px 4px 8px #000000;
+  text-shadow: $standard-shadow;
 
   &-logo {
     > a > span {
@@ -13,11 +13,27 @@
     }
 
     &-icon {
-      width: 55px;
+      width: 125px;
       height: auto;
-      margin: 15px 0 10px 40px;
-      border: white outset 3px;
-      border-radius: 100%;
+      @include breakpoint-up(medium) {
+        width: 160px;
+        margin-top: 5px;
+      }
+      @include breakpoint-up(large ) {
+        width: 100px;
+      }
+
+    }
+
+    .ghost-icon {
+      visibility: hidden;
+      text-align: center;
+      position: relative;
+      bottom:41px;
+      @include breakpoint-up(large ) {
+        visibility: visible;
+      }
+
     }
   }
 
@@ -51,6 +67,13 @@
       &:not(:last-child) {
         margin-right: 32px;
       }
+    }
+  }
+
+  .button-sign-in {
+    max-height: 3.12rem;
+    @include breakpoint-up(large ) {
+      margin-right: 3%;
     }
   }
 

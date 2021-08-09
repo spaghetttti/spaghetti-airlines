@@ -1,8 +1,6 @@
 @import "../scss-assets/main-style.scss";
 
 .main-grid {
-  display: flex;
-  flex-flow: row wrap;
   margin-top: 40px;
   justify-content: space-around;
   margin: auto;
@@ -18,7 +16,7 @@
         flex: 2;
         order: 2;
       }
-      &>img {
+      & > img {
         @include breakpoint-up(large) {
           min-height: 2rem;
           min-width: 37rem;
@@ -31,8 +29,8 @@
         flex: 1;
         order: 1;
         min-width: 28rem;
-        
-        &>p {
+
+        & > p {
           margin: 35px 30px 40px 0;
         }
       }
@@ -53,33 +51,96 @@
       & > p {
         color: black;
         margin: 35px 30px 40px 30px;
+        text-shadow: $light-shadow;
       }
     }
   }
 
-  .grid-container {
-    margin: 10px auto;
-    width: 90%;
-    background-color: #0072c2;
-    border-bottom: #ffaa1c solid 5px;
-    border-radius: 5px;
-    padding: 10px;
-
-    .learn-more-link {
-      color: #9bcdff;
-      text-shadow: none;
-      margin-left: 75%;
+  // Options button ? probably should be saved as a different component
+  .options {
+    color: black;
+    .options-atc {
+      padding: 10px;
+      background-color: #0072c2;
+      border-bottom: #ffaa1c solid 5px;
+      border-radius: 5px;
+      color: white;
+      .learn-more-link {
+        color: #ffaa1c;
+        text-align: right;
+        padding: 0 10px 10px 0;
+      }
     }
-  }
 
-  .minor-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 95%;
-    margin-bottom: 20px;
+    &-grid {
+      @include breakpoint-up(medium) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    
+    .box {
+      background-color: #0072c2;
+      border-bottom: #ffaa1c solid 5px;
+      border-radius: 5px; 
+      color: white;
+    }
+    
+    &-item {
+      padding: 1rem;
+      margin-bottom: 15px;
+      text-align: center;
+      @include breakpoint-up(medium) {
+        flex: 0 0 50%;
+        text-align: left;
+        
+        margin: 0 10px;
+        
+      }
 
-    .grid-container {
-      margin: auto;
+      @include breakpoint-up(large) {
+        flex: 1;
+        margin: 0 10px;
+      }
+    }
+
+    &-title {
+      font-size: $font-med;
+      text-shadow: $light-shadow;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      @include breakpoint-up(large) {
+        font-size: $font-b;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      &:hover {
+        color: #ffaa1c;
+        animation: light-fade-shadow 350ms ease-in-out forwards;
+      }
+    }
+
+    &-desc {
+      font-size: 0.875rem;
+      color: #ddddddd9;
+      text-shadow: none;
+    }
+
+    .img-box {
+      
+      display: grid;
+      height: 100%;
+     
+      .center-fit {
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
+      }
+      >img {
+        text-align: center;
+      align-items: center;
+      }
     }
   }
 }

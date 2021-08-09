@@ -4,7 +4,11 @@ distance (S) with a one start point and, time between 2 cities and countryies wi
 just |(S2-S1)/v| v-average airplane speed 
 > Note ! make an ACTIVE button on homepage that differec
 > Note ! make button hover animaiton more fun with filling effect  
-> Note ! make head title and sign in text in one line
+> Note ! make head title and sign in text in one line	
+> Note ! in Ipad menu overlay starts too low 
 > Note ! Can not push a class "noscroll" to body from header.component
 08.08.21 >> Style Hero img, learn flex-box and grid !
-> Note ! Fix title positioning in main-grid.styles.scss 
+>>>> note ! make some how so that options button are also are get from a react redux store 
+>>>> Try Vim
+> Note ! unify common styles an place in _global.scss
+> Note !!! Fix Ipad version of options grid Overlay in broken and header to high for mob view

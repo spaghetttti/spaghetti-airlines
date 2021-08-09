@@ -4,7 +4,7 @@ import "./header.styles.scss";
 
 import "./menu.scss";
 
-import { ReactComponent as Logo } from "../../assets/takeoff.svg";
+import { ReactComponent as Logo } from "../../assets/main-logo1.svg";
 
 class HeaderComponent extends React.Component {
     constructor(props) {
@@ -37,11 +37,8 @@ class HeaderComponent extends React.Component {
               <nav className="flex flex-jc-sb flex-ai-c change-on-mob">
                 <div className="header-logo flex flex-jc-sb">
                   <a href="/">
-                    <Logo className="header-logo-icon" />
-                    <span className="">Spaghetti AirLines</span>
-                    {
-                      //Edit Class to place <span> in center either hide in mob view
-                    }
+                    <Logo className='header-logo-icon'/>
+                    <span className="ghost-icon">Spaghetti AirLines</span>
                   </a>
                 </div>
           
@@ -54,7 +51,7 @@ class HeaderComponent extends React.Component {
                 </div>
           
                 <a className="button button-sign-in" href="/">
-                  Sign in
+                  <span>Sign in</span>
                 </a>
                 
                 <div className="header-menu hide-for-desktop menu-wrapper">
