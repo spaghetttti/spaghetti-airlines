@@ -1,9 +1,9 @@
 @import '../scss-assets/animations';
+@import '../scss-assets/mixins';
 
 $bar-width: 40px;
 $bar-height: 4px;
 $bar-spacing: 10px;
-
 
 .menu-wrapper {
   margin-right: 300%;
@@ -67,11 +67,14 @@ $bar-spacing: 10px;
 
 .overlay {
 	position: absolute;
-	top: 12%;
+	top: 17%;
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
 	background-image: linear-gradient(#003b73, transparent);
+  @include breakpoint-up(medium) {
+    top: 14%;
+  }
 }
 
 .header-list {

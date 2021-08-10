@@ -32,7 +32,7 @@ a, a:visited, a:hover {
 
 //Flex box
 .flex {
-    display: flex;
+    
     &-jc-sb {
         justify-content: space-between;
     }
@@ -43,6 +43,9 @@ a, a:visited, a:hover {
 
     &-ai-c {
         align-items: center;
+    }
+    @include breakpoint-up(large) {
+        display: flex;
     }
 }
 
