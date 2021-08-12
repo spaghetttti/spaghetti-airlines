@@ -63,10 +63,17 @@ button, .button {
     &:hover {
         animation: shadow-fade 200ms ease-in-out forwards;
     }
+    
+    &-google {
+        background-color: rgb(100, 100, 204);
+    
+    }
+
         
     
 
 }
+
 
 //Spacing 
 .container {
