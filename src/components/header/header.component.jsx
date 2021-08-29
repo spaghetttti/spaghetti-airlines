@@ -1,5 +1,7 @@
 import React from "react";
 
+import { auth } from "../../firebase/firebase.utlls";
+
 import "./header.styles.scss";
 
 import "./menu.scss";
@@ -50,8 +52,13 @@ class HeaderComponent extends React.Component {
                   <a href="/">Contact Us</a>
                 </div>
           
-                <a className="button button-sign-in" href="/">
-                  <span>Sign in</span>
+                <a href={this.props.currentUser ? '/' : '/signin'} className="button button-sign-in">
+                  {
+                    this.props.currentUser ?
+                    <span onClick={()=>auth.signOut()}>Sign out</span> :
+                    <span>Sign in</span>
+                  }{
+                  console.log(this.props.currentUser)}
                 </a>
                 
                 <div className="header-menu hide-for-desktop menu-wrapper">

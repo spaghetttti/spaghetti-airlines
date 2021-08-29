@@ -52,6 +52,7 @@ a, a:visited, a:hover {
 // Buttons 
 button, .button {
     padding: 0.875rem 1.475rem;
+    text-shadow: $standard-shadow;
     background:#ffaa1c;
     border-radius: 50px;
     border : 0;
@@ -65,8 +66,8 @@ button, .button {
     }
     
     &-google {
-        background-color: rgb(100, 100, 204);
-    
+        background-color: #003b73;
+       
     }
 
         

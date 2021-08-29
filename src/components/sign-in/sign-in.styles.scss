@@ -1,7 +1,9 @@
 @import '../scss-assets/main-style.scss';
 
-sign-in {
+.sign-in {
     width: 30vw;
     display: flex;
     flex-direction: column;
+    text-shadow: $very-light-shadow;
+    
 }
