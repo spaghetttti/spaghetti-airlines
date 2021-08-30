@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./options-container.styles.scss";
+import "./options-item.styles.scss";
 
 const OptionsItem = ({ title, sub_title, imgUrl, linkTo}) => (
   <div className="options-item box">

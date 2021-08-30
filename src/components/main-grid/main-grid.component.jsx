@@ -1,7 +1,5 @@
 import React from "react";
-import OptionsItem from "../options-container/options-container.component";
-
-import OptionsContainer from "../options-container/options-container.component";
+import OptionsItem from "../options-item/options-item.component";
 
 import "./main-grid.styles.scss";
 
