@@ -1,0 +1,81 @@
+@import "../scss-assets/main-style.scss";
+
+.options-grid {
+      @include breakpoint-up(medium) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .box {
+      background-color: #0072c2;
+      border-bottom: #ffaa1c solid 5px;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .options-item {
+      padding: 1rem;
+      margin-bottom: 15px;
+  
+      text-align: center;
+      @include breakpoint-up(medium) {
+        flex: 1 0 45%;
+        text-align: left;
+        margin: 5px; 
+      }
+
+      @include breakpoint-up(large) {
+        flex: 1;
+        margin: 0 10px;
+  
+      }
+    }
+
+    .options-title {
+      font-size: $font-med;
+      text-shadow: $light-shadow;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      @include breakpoint-up(large) {
+        font-size: $font-b;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .options:hover {
+        color: #ffaa1c;
+        color : pink;
+        animation: light-fade-shadow 350ms ease-in-out forwards;
+      }
+    }
+
+    .options-desc {
+      font-size: 0.875rem;
+      color: #ddddddd9;
+      text-shadow: none;
+    }
+
+    .img-box {
+      display: flex;
+      height: 100%;
+      .center-fit {
+        width: 550px;
+        margin: auto;
+      }
+      > img {
+        text-align: center;
+        align-items: center;
+      }
+      @include breakpoint-down(large) {
+        .center-fit {
+          width: 420px;
+        }
+      }
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+        .center-fit {
+          width: 80vw;
+        }
+      }
+    }

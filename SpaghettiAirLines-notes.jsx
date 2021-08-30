@@ -34,15 +34,17 @@ just |(S2-S1)/v| v-average airplane speed
 	2: Style auth page = 1.5 hours
 		2.1 : grid box of 2 auth methods 
 		2.2 : colors and sizes 
-	3: Style a footer = 1 hour 
+	 
 	4: Refresh Redux = 2 hours 
 		4.1 : watch some yt tutorial and watch advance redux in udemy
 )
 ?8/?27/?2021
 (
 - To-do ! make a custom button component 
+- To-do ! make options button / container as a different component
 	1: Store "Already made flights aka Trending flight" in redux store = 2 hours
 	 1.1: Write 6 trending flights in a grid 
 	2: Move flights data to firebase DB = 3 hours 
+	3: Style a footer = 1 hour
 )
 </div>  

@@ -1,7 +1,28 @@
+@import '../../components/scss-assets/main-style.scss';
+
 .sign-in-out {
     width: 850px;
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
     color: black;
+    text-shadow: $very-light-shadow;
+   
+    .title {
+        margin: 10px 0;
+    }
+    
+    .sub-title {
+        color: rgba(0, 0, 0, 0.39);
+    }
+
+    @include breakpoint-down(medium) { 
+        flex-direction: column;
+        text-align: center;
+    
+    }
+   
+    @include breakpoint-down(xsmall) {
+        width: 710px;
+    }
 }

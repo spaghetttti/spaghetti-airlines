@@ -46,7 +46,7 @@ class HeaderComponent extends React.Component {
           
                 <div className="header-links hide-for-mobile">
                   <a href="/">Home</a>
-                  <a href="/">Flight</a>
+                  <a href="/">Flights</a>
                   <a href="/">Car</a>
                   <a href="/">Hotel</a>
                   <a href="/">Contact Us</a>

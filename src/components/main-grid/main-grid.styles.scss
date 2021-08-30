@@ -58,7 +58,6 @@
 
   // Options button ? probably should be saved as a different component
   .options {
-    color: black;
     .options-atc {
       padding: 10px;
       background-color: #0072c2;
@@ -78,29 +77,29 @@
         flex-wrap: wrap;
       }
     }
-    
+
     .box {
       background-color: #0072c2;
       border-bottom: #ffaa1c solid 5px;
-      border-radius: 5px; 
+      border-radius: 5px;
       color: white;
     }
-    
+
     &-item {
       padding: 1rem;
       margin-bottom: 15px;
+  
       text-align: center;
       @include breakpoint-up(medium) {
-        flex: 0 0 50%;
+        flex: 1 0 45%;
         text-align: left;
-        
-        margin: 0 10px;
-        
+        margin: 5px; 
       }
 
       @include breakpoint-up(large) {
         flex: 1;
         margin: 0 10px;
+  
       }
     }
 
@@ -128,18 +127,26 @@
     }
 
     .img-box {
-      
-      display: grid;
+      display: flex;
       height: 100%;
-     
       .center-fit {
-        max-width: 100%;
-        max-height: 100vh;
+        width: 550px;
         margin: auto;
       }
-      >img {
+      > img {
         text-align: center;
-      align-items: center;
+        align-items: center;
+      }
+      @include breakpoint-down(large) {
+        .center-fit {
+          width: 420px;
+        }
+      }
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+        .center-fit {
+          width: 80vw;
+        }
       }
     }
   }
