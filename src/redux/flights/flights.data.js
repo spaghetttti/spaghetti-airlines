@@ -4,7 +4,7 @@ const FLIGHTS_DATA = [
     country: "from USA to Canada",
     city: "Texas -> Toronto",
     imageUrl: "",
-    time: 3,
+    time: 3, 
   },
   {
     id: 2,

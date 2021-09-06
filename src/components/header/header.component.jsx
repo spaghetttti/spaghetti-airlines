@@ -1,9 +1,9 @@
 import React from "react";
 
+import { connect} from 'react-redux';
 import { auth } from "../../firebase/firebase.utlls";
 
 import "./header.styles.scss";
-
 import "./menu.scss";
 
 import { ReactComponent as Logo } from "../../assets/main-logo1.svg";
@@ -58,7 +58,7 @@ class HeaderComponent extends React.Component {
                     <span onClick={()=>auth.signOut()}>Sign out</span> :
                     <span>Sign in</span>
                   }{
-                  console.log(this.props.currentUser)}
+                  console.log('currentUser',this.props.currentUser)}
                 </a>
                 
                 <div className="header-menu hide-for-desktop menu-wrapper">
@@ -82,4 +82,8 @@ class HeaderComponent extends React.Component {
     }
 };
 
-export default HeaderComponent;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(HeaderComponent);
