@@ -3,11 +3,15 @@ import React from "react";
 import HeaderComponent from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.component";
 import SignInOutPage from "./pages/sign-in-out/sign-in-out.component";
+import BookingPage from "./pages/booking/booking.component";
 
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import { Switch, Route, Redirect } from "react-router-dom";
+
 import { auth, createUserProfileDocument } from "./firebase/firebase.utlls";
 import { setCurrentUser } from "./redux/user/user.actions";
+import { selectCurrentUser } from "./redux/user/user.selector";
 
 import "./App.css";
 
@@ -56,14 +60,15 @@ class App extends React.Component {
               )
             }
           />
+          <Route path='/booking' component={BookingPage}/>
         </Switch>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

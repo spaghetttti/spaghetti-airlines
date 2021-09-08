@@ -42,3 +42,12 @@ const FLIGHTS_DATA = [
     time: 3,
   }
 ];
+
+const flightsReducer = (state = FLIGHTS_DATA, action ) => {
+  switch(action.type) {
+    default: 
+      return state;
+  }
+}
+
+export default flightsReducer;

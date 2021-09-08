@@ -2,13 +2,14 @@ import React from "react";
 import OptionsItem from "../options-item/options-item.component";
 
 import "./main-grid.styles.scss";
+import logo from '../../assets/heroimg.jpg';
 
 const MainGrid = () => (
   <div className="main-grid">
     <div className="hero container">
       <div className="hero-img">
         <img
-          src="https://image.freepik.com/free-vector/queue-immigrants-standing-holding-luggage-waiting-departure-airport-group-tourists-with-globe-map-pointers-destination-line-background-travel-immigration-concept_74855-10142.jpg"
+          src={logo}
           width="100%"
           alt="image of people in line"
         />
@@ -16,7 +17,7 @@ const MainGrid = () => (
       <div className="hero-text container">
         <h1>Next generation flying</h1>
         <p>Make your flying experience safer and more pleasant with us</p>
-        <a href="/" className="button">
+        <a href="/booking" className="button">
           Purchase tickets
         </a>
       </div>
@@ -36,7 +37,7 @@ const MainGrid = () => (
       <div className="options-grid container">
         <div className="options-item box">
           <div className="options-title">
-            <a href="/">&#9992; BOOK A FLIGHT</a>
+            <a href="/booking">&#9992; BOOK A FLIGHT</a>
           </div>
           <div className="options-desc">
             Our modern booking technique will help you
@@ -52,7 +53,7 @@ const MainGrid = () => (
         </div>
         <div className="options-item box">
           <div className="options-title">
-            <a href="/">&#128348; FLIGHT STATUS</a>
+            <a href="/booking">&#128348; FLIGHT STATUS</a>
           </div>
           <div className="options-desc">
             Our modern flight status checking technique will help you
@@ -113,16 +114,6 @@ const MainGrid = () => (
             Vacation Special Offers and Travel Deals
           </div>
         </div>
-        <OptionsItem
-          title={"title as props1"}
-          sub_title={"sub-title as props"}
-          linkTo={'#'}
-        />
-        <OptionsItem
-          title={"title as props2"}
-          sub_title={"sub-title as props"}
-          linkTo={'#'}
-        />
       </div>
     </div>
   </div>

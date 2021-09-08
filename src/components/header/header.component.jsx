@@ -2,11 +2,13 @@ import React from "react";
 
 import { connect} from 'react-redux';
 import { auth } from "../../firebase/firebase.utlls";
+import { createStructuredSelector } from "reselect";
 
 import "./header.styles.scss";
 import "./menu.scss";
 
 import { ReactComponent as Logo } from "../../assets/main-logo1.svg";
+import {selectCurrentUser} from '../../redux/user/user.selector';
 
 class HeaderComponent extends React.Component {
     constructor(props) {
@@ -81,9 +83,14 @@ class HeaderComponent extends React.Component {
 
     }
 };
+// The long way
+// const mapStateToProps = (state) => ({
+//   currentUser: selectCurrentUser(state)
+// })
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser
+
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 export default connect(mapStateToProps)(HeaderComponent);

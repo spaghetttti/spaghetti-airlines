@@ -1,0 +1,57 @@
+@import '../scss-assets/main-style.scss';
+
+.main-grid {
+    margin-top: 40px;
+    justify-content: space-around;
+    margin: auto;
+  
+    .hero {
+      @include breakpoint-up(large) {
+        display: flex;
+        align-items: center;
+      }
+  
+      &-img {
+        @include breakpoint-up(large) {
+          flex: 2;
+          order: 2;
+        }
+        & > img {
+          @include breakpoint-up(large) {
+            min-height: 2rem;
+            min-width: 37rem;
+          }
+        }
+      }
+  
+      &-text {
+        @include breakpoint-up(large) {
+          flex: 1;
+          order: 1;
+          min-width: 28rem;
+  
+          & > p {
+            margin: 35px 30px 40px 0;
+          }
+        }
+        text-align: center;
+        margin-top: 0; //Temporary solution to positioning problem
+        padding-top: 0; //1
+  
+        // position: relative;
+        // bottom: 85px;
+        // Best Positioning but it overlays menus list because of position: relative
+        & > h1 {
+          margin-top: 0; //Temporary solution to positioning problem
+          padding-top: 0; //2
+          line-height: 1.4;
+          color: #ffaa1c;
+          text-shadow: 2px 2px black;
+        }
+        & > p.brw {
+          color: black;
+          margin: 35px 30px 0px 30px;
+          text-shadow: $light-shadow;
+        }
+      }
+    }}
