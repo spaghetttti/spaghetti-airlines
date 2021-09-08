@@ -27,14 +27,17 @@ const BookingGrid = ({ flight }) => ({
       </div>
     </div>
         <div className="options-grid container">
-        {flight.map((item) => (
+        {
+          
+          flight.flightsData.map((item) => (
           <OptionsItem
             key={item.id}
             title={item.country}
             sub_title={item.city}
             add_text={`Fight time : ${item.time} hours`}
           />
-        ))}
+        ))
+        }
         </div>
       </div>
     );

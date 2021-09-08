@@ -9,16 +9,19 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { auth, createUserProfileDocument } from "./firebase/firebase.utlls";
+import { auth, createUserProfileDocument, addCollectionAndDocuments} from "./firebase/firebase.utlls";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selector";
+
+import { selectFlight } from "./redux/flights/flights.selector";
 
 import "./App.css";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
-
+  
   componentDidMount() {
+    const { collectionsArray} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       //after user state has been changed we check wether there is a user (userAuth) or not
       if (userAuth) {
@@ -26,16 +29,16 @@ class App extends React.Component {
         const userRef = await createUserProfileDocument(userAuth);
         //if the use is new, which means that there is no snapShot,
         // the function will create a user in firebase DB, and the snapShot
-        console.log(userRef);
         userRef.onSnapshot((snapShot) => {
           this.props.setCurrentUser({
             id: snapShot.id,
             ...snapShot.data(),
           });
         });
-      } else {
-        this.props.setCurrentUser(userAuth);
-      }
+      }  
+      this.props.setCurrentUser(userAuth);
+      addCollectionAndDocuments('collections', Array.from(collectionsArray.flightsData));
+      
     });
   }
 
@@ -68,7 +71,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  collectionsArray: selectFlight
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -2,7 +2,7 @@ import React from "react";
 
 import "./options-item.styles.scss";
 
-const OptionsItem = ({ title, sub_title, add_text, imgUrl, linkTo}) => (
+const OptionsItem = ({ title, sub_title, add_text, imgUrl, linkTo = '#'}) => (
   <div className="options-item box">
     <div className="options-title">
       <a href={linkTo}>{title}</a>
