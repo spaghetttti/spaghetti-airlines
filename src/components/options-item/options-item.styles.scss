@@ -8,8 +8,8 @@
     }
 
     .box {
-      background-color: #0072c2;
-      border-bottom: #ffaa1c solid 5px;
+      background-color: $boxLightBlue;
+      border-bottom: $boxLightOrange solid 5px;
       border-radius: 5px;
       color: white;
     }
@@ -44,7 +44,7 @@
       }
 
       .options:hover {
-        color: #ffaa1c;
+        color: $boxLightOrange;
         color : pink;
         animation: light-fade-shadow 350ms ease-in-out forwards;
       }

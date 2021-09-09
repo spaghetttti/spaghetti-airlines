@@ -1,7 +1,7 @@
 @import "../scss-assets/main-style.scss";
 
 .header {
-  background-color: #003b73;
+  background-color: $headerDarkBlue;
   text-shadow: $standard-shadow;
 
   &-logo {
@@ -13,11 +13,14 @@
     }
 
     &-icon {
-      width: 125px;
+      width: 110px;
       height: auto;
+      position: relative;
+      top: 18px;
       @include breakpoint-up(medium) {
         width: 160px;
         margin-top: 5px;
+        top: 0;
       }
       @include breakpoint-up(large ) {
         width: 100px;
@@ -88,6 +91,6 @@
 .change-on-mob {
   @include breakpoint-down(medium) {
     display: grid;
-    grid-template-columns: 55% auto 15%;
+    grid-template-columns: 45% auto 15%;
   }
 }

@@ -16,6 +16,7 @@ import { selectCurrentUser } from "./redux/user/user.selector";
 import { selectFlight } from "./redux/flights/flights.selector";
 
 import "./App.css";
+import FooterComponent from "./components/footer/footer.component";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -63,6 +64,7 @@ class App extends React.Component {
           />
           <Route path='/booking' component={BookingPage}/>
         </Switch>
+        <FooterComponent/>
       </div>
     );
   }
