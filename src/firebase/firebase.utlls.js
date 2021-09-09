@@ -56,7 +56,20 @@ export const addCollectionAndDocuments = async (
     return await batch.commit();
   };
  
-firebase.initializeApp(config);
+firebase.initializeApp(config); //kinda weird it's sitting here 
+
+export const convertCollectionsSnapshotToMap = (collections) => {
+    const trasformedCollection = collections.docs.map(doc => {
+        const singleFlight = doc.data();
+        return {
+            id: doc.id,
+            singleFlight
+        }
+    })
+    
+    console.log('trasformedCollection:',trasformedCollection);
+    return trasformedCollection;
+}
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();

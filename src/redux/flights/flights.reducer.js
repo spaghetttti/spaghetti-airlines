@@ -1,3 +1,6 @@
+import { updateCollections } from "./flights.actions";
+import ShopActionTypes from "./flights.types";
+
 const FLIGHTS_DATA = {
   flightsData: [
     {
@@ -47,6 +50,11 @@ const FLIGHTS_DATA = {
 
 const flightsReducer = (state = FLIGHTS_DATA, action) => {
   switch (action.type) {
+    case (ShopActionTypes.UPDATE_COLLECTIONS):
+      return {
+        ...state,
+        collections: action.payload
+      }
     default:
       return state;
   }

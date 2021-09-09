@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { auth, createUserProfileDocument, addCollectionAndDocuments} from "./firebase/firebase.utlls";
+import { auth, createUserProfileDocument} from "./firebase/firebase.utlls";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selector";
 
@@ -21,7 +21,6 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
   
   componentDidMount() {
-    const { collectionsArray} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       //after user state has been changed we check wether there is a user (userAuth) or not
       if (userAuth) {
@@ -37,7 +36,6 @@ class App extends React.Component {
         });
       }  
       this.props.setCurrentUser(userAuth);
-      addCollectionAndDocuments('collections', Array.from(collectionsArray.flightsData));
       
     });
   }
@@ -72,7 +70,6 @@ class App extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  collectionsArray: selectFlight
 });
 
 const mapDispatchToProps = (dispatch) => ({
