@@ -1,5 +1,7 @@
 import React from "react";
 import OptionsItem from "../options-item/options-item.component";
+import WithSpinner from "../with-spinner/with-spinner.component";
+
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectFlight } from "../../redux/flights/flights.selector";
@@ -7,29 +9,11 @@ import { selectFlight } from "../../redux/flights/flights.selector";
 import logo from "../../assets/booking.jpg";
 import "./booking-grid.styles.scss";
 
-import {
-  firestore,
-  convertCollectionsSnapshotToMap,
-} from "../../firebase/firebase.utlls";
-
 import { updateCollections } from "../../redux/flights/flights.actions";
 
+const OptionsItemWithSpinner = WithSpinner(OptionsItem);
+
 class BookingGrid extends React.Component {
-  unsubscribeFromSnapshot = null;
-
-  componentDidMount() {
-    const { updateCollections} = this.props;
-    const collectionRef = firestore.collection("collections");
-
-    this.unsubscribeFromSnapshot = collectionRef.onSnapshot(
-      async (snapShot) => {
-        const collectionsMap = convertCollectionsSnapshotToMap(snapShot);
-        console.log('collectionsMap',collectionsMap);
-        updateCollections(collectionsMap);
-      }
-    );
-  }
-
   render() {
     const { flight } = this.props;
     return (
@@ -44,7 +28,7 @@ class BookingGrid extends React.Component {
           </div>
         </div>
         <div className="options-grid container">
-          {flight.flightsData.map((item) => (
+          {flight.collections.map((item) => (
             <OptionsItem
               key={item.id}
               title={item.country}
@@ -64,7 +48,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
   updateCollections: (collectionsMap) =>
-    dispatch(updateCollections(collectionsMap)),
+    dispatch(updateCollections(collectionsMap))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookingGrid);

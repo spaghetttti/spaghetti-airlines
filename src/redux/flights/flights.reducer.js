@@ -1,4 +1,3 @@
-import { updateCollections } from "./flights.actions";
 import ShopActionTypes from "./flights.types";
 
 const FLIGHTS_DATA = {

@@ -60,11 +60,11 @@ firebase.initializeApp(config); //kinda weird it's sitting here
 
 export const convertCollectionsSnapshotToMap = (collections) => {
     const trasformedCollection = collections.docs.map(doc => {
-        const singleFlight = doc.data();
-        return {
-            id: doc.id,
-            singleFlight
-        }
+        // const singleFlight = doc.data();
+        // return {
+        //     singleFlight
+        // }
+        return doc.data()
     })
     
     console.log('trasformedCollection:',trasformedCollection);
